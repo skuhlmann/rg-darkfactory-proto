@@ -1,26 +1,73 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-obsidian: #0B0B0D;
+  --color-deepIron: #1E1E22;
+  --color-forgeGold: #C7A23A;
+  --color-ember: #E0662A;
+  --color-arcane: #6F5BD6;
+  --color-verdigris: #3F7F73;
+  --color-stone: #3A3A3F;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-heading: var(--font-im-fell);
+  --font-sans: var(--font-source-sans);
+  --font-mono: var(--font-fira-code);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0B0B0D;
+  color: #e8e4d9;
+  font-family: var(--font-source-sans), sans-serif;
+}
+
+@keyframes runeGlow {
+  0%, 100% { box-shadow: 0 0 4px #C7A23A55, inset 0 0 4px #C7A23A22; }
+  50% { box-shadow: 0 0 12px #C7A23A88, inset 0 0 8px #C7A23A44; }
+}
+
+@keyframes emberFlicker {
+  0%, 100% { opacity: 0.03; }
+  30% { opacity: 0.06; }
+  60% { opacity: 0.02; }
+  80% { opacity: 0.05; }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatEmber {
+  0% { transform: translateY(0) translateX(0) scale(1); opacity: 0.4; }
+  30% { transform: translateY(-60px) translateX(8px) scale(1.2); opacity: 0.7; }
+  60% { transform: translateY(-120px) translateX(-6px) scale(0.9); opacity: 0.3; }
+  100% { transform: translateY(-200px) translateX(4px) scale(0.6); opacity: 0; }
+}
+
+.rune-glow {
+  animation: runeGlow 3s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.panel {
+  background-color: #1E1E22;
+  border: 1px solid #C7A23A44;
+}
+
+.panel-glow {
+  background-color: #1E1E22;
+  border: 1px solid #C7A23A44;
+  animation: runeGlow 3s ease-in-out infinite;
 }
