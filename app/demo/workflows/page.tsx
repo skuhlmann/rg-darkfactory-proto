@@ -20,7 +20,7 @@ export default function WorkflowsPage() {
   }, []);
 
   return (
-    <div className="p-8 flex flex-col gap-6 max-w-4xl">
+    <div className="p-4 sm:p-6 lg:p-8 flex flex-col gap-6 max-w-4xl">
       <div>
         <div className="font-heading text-forgeGold text-3xl">Workflows</div>
         <div className="text-stone-500 font-mono text-sm mt-1">{workflows.length} active</div>

@@ -36,7 +36,7 @@ export default function ApprovalsPage() {
   const resolved = approvals.filter((a) => a.status !== "pending");
 
   return (
-    <div className="p-8 flex flex-col gap-6 max-w-5xl">
+    <div className="p-4 sm:p-6 lg:p-8 flex flex-col gap-6 max-w-5xl">
       <div>
         <div className="font-heading text-forgeGold text-3xl">Approval Gate</div>
         <div className="text-stone-500 font-mono text-sm mt-1">

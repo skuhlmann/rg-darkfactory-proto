@@ -32,14 +32,14 @@ export default function WorkflowDetailPage() {
 
   if (!workflow) {
     return (
-      <div className="p-8 text-stone-500 font-mono">Loading workflow...</div>
+      <div className="p-4 text-stone-500 font-mono">Loading workflow...</div>
     );
   }
 
   const wfTasks = tasks.filter((t) => workflow.tasks.includes(t.id));
 
   return (
-    <div className="p-8 flex flex-col gap-8 max-w-5xl">
+    <div className="p-4 sm:p-6 lg:p-8 flex flex-col gap-8 max-w-5xl">
       <div>
         <div className="font-heading text-forgeGold text-3xl">{workflow.name}</div>
         <div className="flex items-center gap-3 mt-2">
